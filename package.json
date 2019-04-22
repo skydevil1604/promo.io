@@ -1,0 +1,15 @@
+{
+  "name": "clickable.design",
+  "version": "1.0.0",
+  "description": "clickable.design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Smarty",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  }
+}
