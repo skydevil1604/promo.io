@@ -313,6 +313,9 @@ canvas {
     width: 128px;
     height: 34px;
   }
+  .present a {
+    margin: auto;
+  }
   .header-block {
     display: flex;
     flex-wrap: wrap;
@@ -377,7 +380,7 @@ canvas {
     width: 173px;
     min-height: 161px;
     top: 109px;
-    left: 42px;
+    left: 20px;
   }
   .bridge {
     width: 269px;
@@ -416,7 +419,7 @@ canvas {
     left: 50%;
   }
   .btn {
-    left: 32%;
+    left: 29%;
     width: 211px;
     height: 50px;
     top: 400px;
