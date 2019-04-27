@@ -1,20 +1,19 @@
-//stylus -w styl/style.styl -o css/style.css
-
+//to compile .style into .css run in terminal  stylus -w styl/style.styl -o css/style.css
 @font-face {
-    font-family: 'Modi-Thorson-Italic';
-    src:url('Modi-Thorson-Italic.ttf.woff') format('woff'),
-        url('Modi-Thorson-Italic.ttf.svg#Modi-Thorson-Italic') format('svg'),
-        url('Modi-Thorson-Italic.ttf.eot'),
-        url('Modi-Thorson-Italic.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
+    font-family: 'TTSquaresCondensed-BlackItalic';
+    src: url('../fonts/TTSquaresCondensed-BlackItalic.ttf') format('truetype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Medium';
-    src:url('../fonts/Roboto_Medium.ttf') format('typescript');
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
     font-style: normal;
 }
+
+p 
+    margin 0
+    padding 0
 
 main-dark-color = #0c1013;
 
@@ -36,12 +35,12 @@ body
 
 .background
     position absolute
-    top 0
+    top -54px
     left 50%
     transform translateX(-50%)
     z-index 0
-    max-width 1560px
-    max-height 740px
+    max-width 1800px
+    height auto
     display block
 
 .flag
@@ -60,7 +59,7 @@ body
     left 48%
     transform translateX(-50%)
     z-index 2
-    width 1160px
+    max-width 1160px
     max-height 437px
     display block
 
@@ -94,6 +93,14 @@ body
     border none
     &:hover 
         background-color #fd8100
+    
+.btn span
+    color #0b1019
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+    font-size 32px
+    font-weight 400
+    line-height 26px
+    text-transform uppercase
 
 .bg-rectangle 
     position absolute
@@ -104,26 +111,73 @@ body
     min-width: 1022px;
     min-height: 133px;
     display block
+    -webkit-box-shadow: 0px 150px 90px 20px #0c1013;
+    -moz-box-shadow: 0px 150px 90px 20px #0c1013;
+    box-shadow: 0px 150px 90px 20px #0c1013;
 
-.text-prize 
+.text-prize2
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
     position absolute
-    top 425px
-    left 51%
+    top 440px
+    left 49%
     z-index 3
     transform translateX(-50%)
-    width 757px
-    height 105px
     display block
+    
+.text-prize2 p 
+    text-shadow: 0 13.36px 50px black,0 -2px 50px black;
+    color #ffffff
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+    font-size 48px
+    font-weight 400
+    line-height 42px
+    text-transform uppercase
+
+.text-prize2 span
+    text-shadow 2px 2px 8px rgba(4, 18, 27, 0.56), 0 0 56px rgba(211, 26, 36, 0.4)
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+    font-size 48px
+    font-weight 400
+    line-height 22px
+    text-transform uppercase
+    position relative
+    background #d71015
+    background -webkit-linear-gradient(to bottom, #fff -19%, #ed1319 61%, #d71015 -89%)
+    background linear-gradient(to bottom, #fff -19%, #ed1319 61%, #d71015 -89%)
+    -webkit-background-clip text
+    color transparent
+    border-top 1px solid rgba(255, 255, 255, 0.1)
+    border-bottom 1px solid rgba(255, 255, 255, 0.1)
+    border-radius 3px
+    
 
 .bets 
     position absolute
-    top 515px
+    top 534px
     left 36%
     z-index 3
     transform translateX(-50%)
-    min-width: 515px;
-    min-height: 103px;
     display block
+    text-shadow 2px 1px 6px rgba(4, 18, 27, 0.32)
+    color #ffffff
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+    font-size 64px
+    font-weight 400
+    line-height 26px
+    text-transform uppercase
+    p:first-child 
+        margin-bottom 25px
+
+.bets p:nth-child(2)
+    text-shadow: 2px 1px 6px rgba(4, 18, 27, 0.32)  
+    font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+    font-size 30px
+    font-weight 400
+    line-height 26px
+    text-transform uppercase
+    margin-left -10px
+    span
+        color #d71015
 
 .header 
     width 100%
@@ -150,8 +204,30 @@ body
     display flex
     justify-content center
 
-.boxing-day img
+.boxing-text
     align-self center
+    p:first-child 
+            text-shadow 0 2px 0 #04121b
+            color #ffffff
+            font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+            font-size 26px
+            font-weight 400
+            line-height 26px
+            text-transform uppercase
+            margin 0
+            padding 0
+    p:nth-child(2)
+            text-shadow 0 2px 0 #04121b
+            color #fefefe
+            font-family 'TTSquaresCondensed-BlackItalic', sans-serif
+            font-size 16px
+            font-weight 400
+            line-height 26px
+            text-transform uppercase
+            margin 0
+            padding 0
+        span 
+            color #fdc000
 
 .header-block
     margin-left auto
@@ -265,15 +341,17 @@ canvas
     animation-timing-function linear
     animation-iteration-count infinite
 
-.content::after
-    content ""
+.elagin
+    font-size 11px
+    line-height 14px
+    color #ffffff
+    font-family 'Roboto-Medium', sans-serif
+    font-weight 500
     position absolute
-    top 220px
-    left 0
-    background-image url('../images/dark-bg.png')
-    width 520px
-    height 297px
-    display none
+    top 395px
+    left 50%
+    transform translateX(-50%)
+    z-index 2
 
 @media screen and (max-width: 1100px) and (min-width: 500px) {
     .header-block {
@@ -300,10 +378,11 @@ canvas
         left 195px
     }
     .team {
-        width 857px
+        max-width 857px
         height 340px  
         top 170px  
         left 50%
+        width 100%
     }
     .bridge {
         width 658px
@@ -313,11 +392,15 @@ canvas
         top 120px
         left 42%
     }
-    .text-prize {
-        width 620px
-        height 95px  
-        top 385px
-        left 52%
+    .text-prize2 {
+        top 415px
+        left 50%
+    }
+    .text-prize2 p {
+        font-size 40px
+    } 
+    .text-prize2 p span {
+        font-size 40px
     }
     .bg-rectangle {
         top 465px
@@ -325,25 +408,40 @@ canvas
         width 800px
         height 115px 
         min-width 800px
-        min-height 115px   
+        min-height 115px  
+        -webkit-box-shadow -1px 154px 29px 32px #0c1013
+        -moz-box-shadow -1px 154px 29px 32px #0c1013
+        box-shadow -1px 154px 29px 32px #0c1013 
     }
     .bets {
-        top 480px
-        left 40%
+        top: 490px
+        left 41%
         width 400px
         height 80px
         min-width 400px
         min-height 80px
+    }
+    .bets p:first-child {
+        font-size 50px
+        margin-bottom 20px
+    }
+    .bets p:nth-child(2) {
+        font-size 23px
+    }
+    .elagin {
+        font-size 11px
+        line-height 14px
+        box-shadow 0 0 83px rgba(0,0,0,0.4)
+        max-width 196px
+        text-align center
+        left 51%
+        top 368px
     }
     .btn {
         width 293px
         height 69px
         top 488px
         left 55%
-    }
-    .btn img {
-        width 225px
-        height 25px
     }
     .highlight {
         width 240px
@@ -352,8 +450,9 @@ canvas
         left 20%
     }
     .background {
-        max-width 1100px
-        max-height 768px
+        max-width 1200px
+        height auto
+        top 75px
     }
 }
 
@@ -429,10 +528,6 @@ canvas
         top 161px
         left 50% 
     }
-    .content::after {
-        display block
-        z-index 2
-    }
     .content {
         min-width 500px    
     }
@@ -450,11 +545,40 @@ canvas
         top 104px
         left 42%
     }
-    .text-prize {
-        left 53%
-        width 300px
-        height 50px
-        top 262px    
+    .elagin {
+        font-size 8px
+        line-height 10px 
+        max-width 143px
+        text-align center  
+        top 251px
+        left 51%
+    } 
+    .text-prize2 {
+        left 51%
+        top 280px 
+        width max-content  
+    }
+    .text-prize2 p {
+        font-size 20px
+        line-height 20px
+    }
+    .text-prize2 p span {
+        font-size 20px
+        line-height 20px
+    }
+    .bets p:nth-child(2) {
+        font-size 17px
+        line-height 17px
+    }
+    .content::after  {
+        content ""
+        position absolute
+        top 220px
+        left 0
+        background-image url('../images/dark-bg.png')
+        width 520px
+        height 297px
+        z-index 2
     }
     .content::before {
         content ""
@@ -475,8 +599,14 @@ canvas
         height 66px
         min-width 296px
         min-height 66px
-        top 316px
+        top 320px
         left 50%
+        font-size 37px
+        line-height 37px
+        text-align center
+    }
+    .bets p:first-child {
+        margin-bottom 10px
     }
     .btn {
         left 29%    
@@ -486,14 +616,24 @@ canvas
         position absolute
         z-index 3
     }
-    .btn img {
-        width 141px
-        height 14px
-        transform skewX(10deg)
+    .btn span {
+        font-size 20px
+        line-height 20px
     }
     .highlight {
         width 205px
         height 28px
         top 448px   
+    }
+    .boxing-text p:nth-child(2) {
+        font-size 9px
+        line-height 11px
+    }
+    .boxing-text p:first-child {
+        font-size 14px
+        line-height 14px
+    }
+    .boxing-text {
+        text-align center
     }
 }
